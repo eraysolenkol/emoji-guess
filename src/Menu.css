@@ -31,3 +31,10 @@
     color: #141517;
     cursor: pointer;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .menu-button {
+        width: 50%;
+    }
+}

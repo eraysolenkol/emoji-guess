@@ -57,3 +57,30 @@
 .submit:hover {
     transform: scale(1.1);
 }
+
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .item {
+        width: 300px;
+    }
+
+    .answer {
+        width: 100px;
+        margin-top: 5px;
+    }
+
+    .submit {
+        width: 40px;
+        height: 40px;
+    }
+
+    .item > * {
+        font-size: 18px;
+    }
+
+    .item > *:last-child {
+        padding-right: 0;
+    }
+
+}
