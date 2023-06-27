@@ -10,8 +10,6 @@ function Quiz() {
         const answerText = selectedQuestions.find((question) => {
             return question.question === e.target.parentNode.querySelector('.question').innerText;
         }).answerText.toLowerCase();
-
-        console.log(answerText);
         if (answer.replace("'", "") === answerText) {
             e.target.parentNode.querySelector('.answer').style.backgroundColor = 'green';
             e.target.parentNode.querySelector('.answer').disabled = true;
@@ -69,6 +67,17 @@ function Quiz() {
                 { question: "👕", answerText: 'Shirt' },
                 { question: "🔪💀", answerText: 'Kill Bill' },
                 { question: "💤😴💤", answerText: 'Snooze' }
+            ]
+        },
+        {
+            artistSlug: 'travis-scott',
+            questions: [
+                { question: "⭐🌌🔭", answerText: 'STARGAZING' },
+                { question: "🏔️🆙🛌", answerText: 'HIGHEST IN THE ROOM' },
+                { question: "🦋🌪️💥", answerText: 'Butterfly Effect' },
+                { question: "🐜🆘🌵", answerText: 'Antidote' },
+                { question: "☀️🆙🛌", answerText: 'Wake Up' },
+                { question: "🙊❌🗣️", answerText: "CANT SAY" },
             ]
         },
     ]
