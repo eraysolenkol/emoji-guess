@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import './Quiz.css'
+import { useState, useEffect } from "react";
 
 function Quiz() {
     const navigate = useNavigate();
@@ -13,10 +14,7 @@ function Quiz() {
         if (answer.replace("'", "") === answerText) {
             e.target.parentNode.querySelector('.answer').style.backgroundColor = 'green';
             e.target.parentNode.querySelector('.answer').disabled = true;
-            correctAnswers++;
-            if (correctAnswers === totalQuestion) {
-                alert("You won!");
-            }
+            setCorrectAnswers(1 + correctAnswers);
         } else {
             e.target.parentNode.querySelector('.answer').style.backgroundColor = 'red';
         }
@@ -86,26 +84,33 @@ function Quiz() {
     }).map((artist) => {
         return artist.questions;
     })[0];
+
     const totalQuestion = selectedQuestions.length;
-    let correctAnswers = 0;
+    const [correctAnswers, setCorrectAnswers] = useState(0);
+
+    useEffect(() => {
+        console.log(correctAnswers, totalQuestion);
+        if (correctAnswers === totalQuestion) {
+            alert("You won!");
+        }
+    }, [correctAnswers, totalQuestion]);
 
     return (
         <div className="container">
-            <p class="title">
-                <span class="underline underline--emoji">{
+            <p className="title">
+                <span className="underline underline--emoji">{
                     params.artistName.replace("-", " ").split(' ')
                         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
                         .join(' ')
                 }</span>
             </p>
             <div className="items">
-                {console.log(selectedQuestions)}
                 {
                     selectedQuestions.map((question) => {
                         return (
                             <div className="item">
                                 <p className="question">{question.question}</p>
-                                <div class="input-container">
+                                <div className="input-container">
                                     <input className="answer" type="text" />
                                 </div>
                                 <input className="submit" type="button" value="🔍" onClick={checkAnswer} />
