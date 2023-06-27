@@ -7,7 +7,7 @@ import slugify from 'slugify';
 function Artists() {
     const navigate = useNavigate();
     let artists = [
-        "The Weeknd", "Ariana Grande", "Drake", "Tame Impala", "SZA", "Travis Scott", "Doja Cat", "Metro Boomin"
+        "The Weeknd", "Ariana Grande", "Drake", "Tame Impala", "SZA", "Travis Scott", "Doja Cat", "Metro Boomin","Güneş"
     ]
 
     function handleClick(e) {

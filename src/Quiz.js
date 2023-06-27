@@ -11,7 +11,7 @@ function Quiz() {
         const answerText = selectedQuestions.find((question) => {
             return question.question === e.target.parentNode.querySelector('.question').innerText;
         }).answerText.toLowerCase();
-        if (answer.replace("'", "") === answerText) {
+        if (answer.replace("'", "").trim() === answerText) {
             e.target.parentNode.querySelector('.answer').style.backgroundColor = 'green';
             e.target.parentNode.querySelector('.answer').disabled = true;
             setCorrectAnswers(1 + correctAnswers);
@@ -99,6 +99,15 @@ function Quiz() {
                 { question: "💥🔥🦸‍♂️", answerText: 'Superhero' },
                 { question: "🌧️☔️💧", answerText: 'Raindrops' },
                 { question: "☂️☔️🌂", answerText: 'Umbrella' },
+            ]
+        },
+        {
+            artistSlug: 'gunes',
+            questions: [
+                { question: "🙏", answerText: 'Dua' },
+                { question: "🦋", answerText: 'Kelebek' },
+                { question: "🚗🏠", answerText: 'Sür Eve' },
+                { question: "🧊", answerText: 'Buz' },
             ]
         },
     ]
