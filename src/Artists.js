@@ -7,7 +7,7 @@ import slugify from 'slugify';
 function Artists() {
     const navigate = useNavigate();
     let artists = [
-        "The Weeknd", "Ariana Grande", "Drake", "Tame Impala", "SZA","Travis Scott"
+        "The Weeknd", "Ariana Grande", "Drake", "Tame Impala", "SZA", "Travis Scott", "Doja Cat", "Metro Boomin"
     ]
 
     function handleClick(e) {
@@ -19,21 +19,21 @@ function Artists() {
     }
 
     return (
-            <div className='container'>
-                    <p class="title">
-                    <span class="underline underline--emoji">Artists</span>
-                </p>
-                <div className='items'>
-                { 
-                artists.map((artist) => {
-                    return <ArtistButton name={artist} clickFunction={handleClick} />
-                })
+        <div className='container'>
+            <p class="title">
+                <span class="underline underline--emoji">Artists</span>
+            </p>
+            <div className='items'>
+                {
+                    artists.map((artist) => {
+                        return <ArtistButton name={artist} clickFunction={handleClick} />
+                    })
                 }
-                </div>
-                <div className='footer'>
-                    <input type="button" value="🔙" onClick={goBack} />
-                </div>
             </div>
+            <div className='footer'>
+                <input type="button" value="🔙" onClick={goBack} />
+            </div>
+        </div>
     );
 }
 

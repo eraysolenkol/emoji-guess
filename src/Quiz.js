@@ -78,6 +78,29 @@ function Quiz() {
                 { question: "🙊❌🗣️", answerText: "CANT SAY" },
             ]
         },
+        {
+            artistSlug: 'doja-cat',
+            questions: [
+                { question: "🗣️💬🎶", answerText: 'Say So' },
+                { question: "🍭🍦🍬", answerText: 'Candy' },
+                { question: "💼🔥💃", answerText: 'Boss Bitch' },
+                { question: "💋", answerText: 'Kiss Me More' },
+                { question: "🙎‍♀️", answerText: 'Woman' },
+                { question: "💻🛏️🔞", answerText: 'Cyber Sex' },
+                { question: "🔥🌺", answerText: 'Hot Pink' }
+            ]
+        },
+        {
+            artistSlug: 'metro-boomin',
+            questions: [
+                { question: "🕷️🕸️🌇", answerText: 'Metro Spider' },
+                { question: "⏰🕛🕑", answerText: 'On Time' },
+                { question: "🌊🌋🌪", answerText: 'Niagara Falls' },
+                { question: "💥🔥🦸‍♂️", answerText: 'Superhero' },
+                { question: "🌧️☔️💧", answerText: 'Raindrops' },
+                { question: "☂️☔️🌂", answerText: 'Umbrella' },
+            ]
+        },
     ]
     const selectedQuestions = questions.filter((artist) => {
         return artist.artistSlug === params.artistName;
